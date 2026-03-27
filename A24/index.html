@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A24</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .loader {
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+        .bars {
+            width: 100%;
+            height: 30px;
+            background-color: black;
+            position: absolute;
+            border: 10px solid white;
+        }
+
+        @keyframes spin1 {
+            0% {
+                transform: rotate(0deg);
+                transform-origin: 0px 0px;
+            }
+            100% {
+                transform: rotate(270deg);
+                transform-origin: 0px 0px;
+            }
+        }
+
+         @keyframes spin2 {
+            0% {
+                transform: rotate(90deg);
+                transform-origin: 0px 0px;
+            }
+            100% {
+                transform: rotate(270deg);
+                transform-origin: 100% 100%;
+            }
+        }
+        .bar1 {
+            top: 20%;
+            left: -20%;
+            width: 140%;
+            z-index: 10;
+             animation: spin1 1s ease-in infinite;
+        }
+        .bar2 {
+           left: 60px;
+           top: -10%;
+           transform: rotate(90deg);
+           transform-origin: 0px 0px;
+           width: 140%;
+           z-index: 13;
+            animation: spin2 1s ease-in infinite;
+        }
+        .bar3 {
+            top: 270px;
+            left: -20%;
+            width: 140%;
+             animation: spin1 1s ease-in infinite;
+            z-index: 12;
+        }
+        .bar4 {
+            top: -10%;
+            left: 270px;
+            transform: rotate(90deg);
+            transform-origin: 0px 0px;
+            width: 140%;
+             animation: spin2 1s ease-in infinite;
+            z-index: 11;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="bars bar1"></div>
+        <div class="bars bar2"></div>
+        <div class="bars bar3"></div>
+        <div class="bars bar4"></div>
+    </div>
+</body>
+</html>
